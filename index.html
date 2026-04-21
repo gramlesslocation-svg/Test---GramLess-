@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GramLess Locations</title>
+
+<style>
+:root{
+  --black:#0d0d0d;
+  --yellow:#f5c400;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 🌟 ANIMATED BACKGROUND */
+body{
+  color:var(--white);
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+  animation:bgMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+  from{background-position:0% 0%;}
+  to{background-position:100% 100%;}
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:rgba(17,17,17,0.8);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #222;
+}
+
+.title{
+  font-size:20px;
+  font-weight:bold;
+  color:var(--yellow);
+}
+
+/* 🔘 GLOW BUTTON */
+.nav a{
+  text-decoration:none;
+  border:1px solid var(--yellow);
+  color:var(--yellow);
+  padding:8px 14px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  background:var(--yellow);
+  color:black;
+  transform:scale(1.08);
+  box-shadow:0 0 20px var(--yellow);
+}
+
+/* 🧭 HERO GLASS CARD */
+.hero{
+  text-align:center;
+  margin:40px auto;
+  padding:40px 20px;
+  width:90%;
+  max-width:700px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  backdrop-filter: blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
+  animation:popIn 0.8s ease;
+}
+
+@keyframes popIn{
+  from{opacity:0; transform:scale(0.9);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.hero h1{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#bbb;
+  font-size:15px;
+}
+
+/* 🗺️ MAP */
+.map-container{
+  width:100%;
+  height:85vh;
+  padding:20px;
+  animation:slideUp 1s ease;
+}
+
+@keyframes slideUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+/* MAP HOVER WOW */
+iframe:hover{
+  transform:scale(1.01);
+  box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="title">GramLess</div>
+  <div class="nav">
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Find Our Locations</h1>
+  <p>Locate the nearest GramLess store quickly and easily.</p>
+</div>
+
+<!-- MAP -->
+<div class="map-container">
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Fy3yHoyB-n1PPJpd2Zi-wStoeRjqZS4&ehbc=2E312F"></iframe>
+</div>
+
+</body>
+</html>
